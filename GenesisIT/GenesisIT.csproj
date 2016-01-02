@@ -71,10 +71,6 @@
     <Content Include="imgs\linkedin-32.png" />
     <Content Include="imgs\twitter-32.png" />
     <Content Include="packages.config" />
-    <Content Include="readme.html">
-      <DependentUpon>readme.md</DependentUpon>
-    </Content>
-    <Content Include="readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
