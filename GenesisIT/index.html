@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Genesis IT</title>
+    <meta charset="utf-8" />
+    <base target="_blank" />
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Segoe UI';
+            background-image: url("imgs/black_pattern04.jpg");
+        }
+
+        .inner {
+            position: relative;
+            margin: 0 auto;
+            width: 1000px;
+            height: 100%;
+            background-color: #444;
+        }
+
+        header {
+            z-index: 100;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            text-align: center;
+        }
+
+        .header-ribbon {
+            float: left;
+            padding: 5px;
+            margin-top: 5px;
+            margin-left: 5px;
+            width: 20px;
+            height: 30px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-repeat: no-repeat;
+            background-size: 26px 26px;
+            background-position-x: 2px;
+            background-position-y: 2px;
+        }
+        .header-ribbon:hover{
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .page-body-outer {
+            position: fixed;
+            margin-top: 5px;
+            width: 100%;
+            top: 0;
+            bottom: 50px;
+            text-align: center;
+        }
+
+        .page-body-inner {
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            line-height: 25px;
+            text-align: center;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner" data-bind="foreach: social">
+            <a class="header-ribbon" data-bind="style: { backgroundImage: image, backgroundColor: color }, attr: { title: title, href: href }"></a>
+        </div>
+    </header>
+    <div class="page-body-outer">
+        <div class="inner page-body-inner">
+            <div>Welcome to <b>Genesis IT</b>, Pete's home on the web.</div>
+        </div>
+    </div>
+    <footer>
+        <div class="inner">Copyright &copy; <span data-bind="text: year"></span> Genesis IT<br />All rights reserved</div>
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script>
+        var socialMedia = [
+            { title: "Twitter", css: "twitter", href: "https://twitter.com/icelance", image: "url('imgs/twitter-32.png')", color: "#00aced" },
+            { title: "Facebook", css: "facebook", href: "https://facebook.com/peter.cooney.351", image: "url('imgs/facebook-32.png')", color: "#3b5998" },
+            { title: "LinkedIn", css: "linkedin", href: "https://uk.linkedin.com/in/peter-cooney-b47097a1", image: "url('imgs/linkedin-32.png')", color: "#517fa4" },
+            { title: "Github", css: "github", href: "http://github.com/PeteCooney", image: "url('imgs/github-32.png')", color: "#800080" }
+        ];
+        var vm = {
+            year: ko.pureComputed(function () { return moment().format("YYYY"); }),
+            social: ko.observableArray(socialMedia)
+        };
+
+        ko.applyBindings(vm)
+    </script>
+</body>
+</html>
