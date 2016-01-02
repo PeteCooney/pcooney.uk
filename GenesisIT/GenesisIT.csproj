@@ -69,7 +69,7 @@
     <Content Include="imgs\facebook-32.png" />
     <Content Include="imgs\github-32.png" />
     <Content Include="imgs\granny.png" />
-    <Content Include="404.html" />
+    <None Include="404.shtml" />
     <Content Include="imgs\linkedin-32.png" />
     <Content Include="imgs\twitter-32.png" />
     <Content Include="packages.config" />
