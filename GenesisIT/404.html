@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>404 - The page you are looking for does not exist.</title>
+    <meta charset="utf-8" />
+    <link href="//fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css" />
+    <style>
+        html, body {
+            font-family: "Press Start 2P";
+            background-image: url("../imgs/black_pattern04.jpg");
+        }
+
+        .content {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 640px;
+            height: 480px;
+            background-color: #000;
+        }
+        .center {
+            text-align: center;
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+            width: 640px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .middle {
+            position: absolute;
+            top: 110px;
+            width: 640px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+        .bottom{
+            position: absolute;
+            bottom: 0;
+            width: 640px;
+            background-color: #f00;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .text {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .green {
+            color: #289225;
+        }
+        .white {
+            color: #fff;
+        }
+        .blue {
+            color: #4bb7b2;
+        }
+        .granny {
+            height: 250px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="top center">
+            <div class="text green">* * * * * * * * * *</div>
+            <div class="text white">Granny's Garden</div>
+            <div class="text green">* * * * * * * * * *</div>
+            <div class="text blue">(c) 1983</div>
+        </div>
+        <div class="middle center"><img src="/imgs/granny.png" class="granny" /></div>
+        <div class="bottom center">
+            <div class="text white">Ha ha! Now I've got you!</div>
+            <div class="text white">I will send you home at once.</div>
+            <div class="text white blink">(space bar)</div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        (function blink() {
+            $(".blink").fadeOut(500).fadeIn(500, blink);
+        })();
+        
+        $(window).keypress(function (e) {
+            if (e.keyCode === 0 || e.keyCode === 32) {
+                e.preventDefault();
+                window.location = "/";
+            }
+        });
+    </script>
+</body>
+</html>

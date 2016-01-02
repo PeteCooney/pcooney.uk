@@ -11,7 +11,16 @@
             width: 100%;
             height: 100%;
             font-family: 'Segoe UI';
+            color: #eee;
             background-image: url("imgs/black_pattern04.jpg");
+        }
+
+        a {
+            color: #eee;
+            text-decoration: underline;
+        }
+        a:active, a:hover, a:visited {
+            color: #ddd;
         }
 
         .inner {
@@ -21,6 +30,10 @@
             height: 100%;
             background-color: #444;
         }
+        .content {
+            margin: 10px;
+            text-align: left;
+        }
 
         header {
             z-index: 100;
@@ -29,7 +42,6 @@
             top: 0;
             text-align: center;
         }
-
         .header-ribbon {
             float: left;
             padding: 5px;
@@ -84,6 +96,19 @@
     <div class="page-body-outer">
         <div class="inner page-body-inner">
             <div>Welcome to <b>Genesis IT</b>, Pete's home on the web.</div>
+            <br /><br />
+            <div class="content">
+                Who is Pete?<br />
+                I'm a 30 something living in Bournemouth, England. I currently employed as Senior Software Engineer for a national voice and data networking company and I have a passion for how things work.<br />
+                Oh, I also watch movies and play video games. Hey, I'm only human!
+            </div>
+            <br />
+            <div class="content">In truth, this domain is used for little more than email. Still, since I've owned it since 2002 (it's 2016 today) and have only ever updated the homepage once before, I figure it's probably time to do something a little more... modern!</div>
+            <br />
+            <div class="content">
+                Maybe, with the fullness of time, I'll actually build a proper website. (Paid work comes first you know!)<br />
+                Until then, please feel free to reach out via social media or email to: <a href="mailto:enquiries@genesis-it.net?subject=Genesis IT Website">enquiries@genesis-it.net</a>
+            </div>
         </div>
     </div>
     <footer>

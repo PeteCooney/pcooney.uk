@@ -68,6 +68,8 @@
   <ItemGroup>
     <Content Include="imgs\facebook-32.png" />
     <Content Include="imgs\github-32.png" />
+    <Content Include="imgs\granny.png" />
+    <Content Include="404.html" />
     <Content Include="imgs\linkedin-32.png" />
     <Content Include="imgs\twitter-32.png" />
     <Content Include="packages.config" />
@@ -81,6 +83,10 @@
   <ItemGroup>
     <Content Include="imgs\black_pattern04.jpg" />
     <Content Include="index.html" />
+    <Content Include="v1\default.htm" />
+    <Content Include="v1\graphics\genesis_logo_black.jpg" />
+    <Content Include="v1\graphics\pixel.gif" />
+    <Content Include="v1\graphics\ptc_2k2_100.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
